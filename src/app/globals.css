@@ -1,5 +1,7 @@
 @import "tailwindcss";
 @plugin "daisyui";
+@import "tailwindcss";
+
 
 :root {
   --background: #ffffff;
@@ -15,7 +17,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    /* --background: #0a0a0a8f; */
     --foreground: #ededed;
   }
 }

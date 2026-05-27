@@ -1,9 +1,13 @@
-import Image from "next/image";
+
+import BannerPage from "@/components/Banner";
+
+import AllFriendsPage from "./all-friends/page";
 
 export default function Home() {
   return (
-    <h1>
-      Main Page
-    </h1>
+    <div >
+     <BannerPage></BannerPage>
+     <AllFriendsPage></AllFriendsPage>
+     </div>
   );
 }
