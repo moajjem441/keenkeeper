@@ -15,7 +15,7 @@ const NavbarPage = () => {
                   <div className="navbar-start">
                   
                      {/* <a className="btn btn-ghost text-xl">KeenKeeper</a> */}
-                     <Image src="/assets/logo.png" alt="KeenKeeper Logo" width={100} height={40} />
+                     <Image src="/assets/logo.png" alt="KeenKeeper Logo" width={110} height={50} />
                 </div>
 
                 <div className="navbar-end mr-15">
@@ -25,7 +25,7 @@ const NavbarPage = () => {
                         </div>
                         <ul
                             tabIndex="-1"
-                            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 max-w-25 p-2 shadow bg-white text-black">
+                            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 max-w-25 p-2 shadow bg-white text-black text-lg font-bold">
                             <li><Link href="/" className={pathName === '/' ? 'text-green-500' : ''}><FaHome /> Home</Link></li>
                             <li><Link href="/timeline" className={pathName === '/timeline' ? 'text-green-500' : ''}><RiTimeLine /> Timeline</Link></li>
                             <li><Link href="/stats" className={pathName === '/stats' ? 'text-green-500' : ''}><FaChartBar /> Stats</Link></li>
@@ -35,7 +35,7 @@ const NavbarPage = () => {
                    
                 </div>
                 <div className="navbar-end hidden lg:flex">
-                    <ul className="menu menu-horizontal px-1 text-black font-bold">
+                    <ul className="menu menu-horizontal px-1 text-black font-bold text-lg">
                         <li><Link href="/" className={pathName === '/' ? 'text-green-500' : ''}><FaHome /> Home</Link></li>
                         <li>
                             <Link href="/timeline" className={pathName === '/timeline' ? 'text-green-500' : ''}><RiTimeLine /> Timeline</Link>
