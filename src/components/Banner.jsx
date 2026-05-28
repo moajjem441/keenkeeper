@@ -1,9 +1,9 @@
 import { IoIosAdd } from "react-icons/io";
-import { Card, Button } from "@heroui/react";
+import { Card, Button, Separator } from "@heroui/react";
 
 const BannerPage = () => {
   return (
-    <div className="w-9/12 mx-auto text-center mt-10 text-black">
+    <div className="w-10/12 mx-auto text-center my-10 text-black">
       <h1 className="text-4xl font-bold">
         Friends to keep close in your life
       </h1>
@@ -41,6 +41,7 @@ const BannerPage = () => {
           <p className="text-gray-400">Interactions This Month</p>
         </Card>
       </div>
+      <Separator className="my-10" ></Separator>
     </div>
   );
 };

@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
       <body className="min-h-full max-w-10/12 mx-auto flex flex-col ">
         <NavbarPage />
 
-       <main>
+       <main className="text-black">
          {children}
        </main>
 
