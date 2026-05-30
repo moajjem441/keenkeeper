@@ -15,7 +15,7 @@ const NavbarPage = () => {
                   <div className="navbar-start">
                   
                      {/* <a className="btn btn-ghost text-xl">KeenKeeper</a> */}
-                     <Image src="/assets/logo.png" alt="KeenKeeper Logo" width={110} height={50} />
+                     <Image src="/assets/logo.png" alt="KeenKeeper Logo" width={170} height={60} />
                 </div>
 
                 <div className="navbar-end mr-15">
