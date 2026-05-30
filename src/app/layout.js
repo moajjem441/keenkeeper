@@ -4,6 +4,8 @@ import NavbarPage from "@/components/Navbar";
 import FriendDetailsCard from "@/components/FriendDetailsCard";
 import FooterPage from "@/components/footer";
 
+import { Toaster } from '@heroui/react';
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -34,6 +36,7 @@ export default function RootLayout({ children }) {
          {/* <FriendDetailsPage></FriendDetailsPage> */}
        </main>
 <FooterPage></FooterPage>
+ <Toaster></Toaster>
       </body>
     </html>
   );

@@ -7,6 +7,8 @@ import { GoArchive } from 'react-icons/go';
 import { IoMdNotificationsOutline } from 'react-icons/io';
 import { RiDeleteBinLine } from 'react-icons/ri';
 
+import { toast } from '@heroui/react';
+
 const FriendDetailsCard = ({ friend }) => {
 
     const handleButtonClick = (type) => {
@@ -28,6 +30,8 @@ const FriendDetailsCard = ({ friend }) => {
         localStorage.setItem("ButtonClickData", JSON.stringify(existingData));
 
          console.log("Saved:", existingData);
+
+         toast.success(`Logged ${type} interaction with ${friend?.name}`);
     } 
 
     // console.log("friend", friend);
@@ -180,7 +184,7 @@ const FriendDetailsCard = ({ friend }) => {
                 <Card className="p-8 shadow-xl">
                   <h1 className="text-xl font-bold mb-4">Quick Check-In</h1>
 
-                <div className="grid grid-cols-3 gap-4 p-4 ">
+                <div className="grid sm:grid-cols-2  md:grid-cols-3 gap-4 p-4 ">
 
                       <Button onClick={() => handleButtonClick('call')}>
                       <div className="border-1 border-gray-300  p-4  flex flex-col justify-center items-center cursor-pointer">
