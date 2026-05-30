@@ -9,7 +9,7 @@ export default function Home() {
     <div >
      <BannerPage></BannerPage>
      <AllFriendsPage></AllFriendsPage>
-     <FooterPage></FooterPage>
+     {/* <FooterPage></FooterPage> */}
      </div>
   );
 }

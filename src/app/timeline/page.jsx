@@ -13,7 +13,7 @@ const TimelinePage = () => {
     // console.log("Timeline Data:", data);
 
     return (
-        <div>
+        <div className="min-h-[60vh]">
 
             <div>
                 <h1 className="text-2xl font-bold mb-4">Timeline</h1>
