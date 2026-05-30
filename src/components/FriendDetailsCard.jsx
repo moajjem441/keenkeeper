@@ -7,6 +7,16 @@ import { RiDeleteBinLine } from 'react-icons/ri';
 
 const FriendDetailsCard = ({ friend }) => {
 
+    const handleButtonClick = (type) => {
+
+        const buttonClickInfo={
+            friendId:friend?.id,
+            friendName:friend?.name,
+            timestamp: new Date().toISOString(),
+            type,
+        }
+    } 
+
     console.log("friend", friend);
     return (
         <div className="grid grid-container grid-cols-12 gap-4 my-10 text-[#244d3f]">
@@ -159,14 +169,14 @@ const FriendDetailsCard = ({ friend }) => {
                 <div className="grid grid-cols-3 gap-4 p-4">
                       <div className="border-1 border-gray-300  p-4  flex flex-col justify-center items-center">
                     <Image src="/assets/call.png" alt="Call" width={20} height={20} />
-                    <Button>
+                    <Button onClick={() => handleButtonClick('call')}>
                         Call
                     </Button>
                   </div>
 
                    <div className="border-1 border-gray-300  p-4  flex flex-col justify-center items-center">
                     <Image src="/assets/text.png" alt="Text" width={20} height={20} />
-                    <Button>
+                    <Button onClick={() => handleButtonClick('text')}>
                         Text
                     </Button>
                   </div>
@@ -174,7 +184,7 @@ const FriendDetailsCard = ({ friend }) => {
 
                    <div className="border-1 border-gray-300  p-4  flex flex-col justify-center items-center">
                     <Image src="/assets/video.png" alt="Video" width={20} height={20} />
-                    <Button>
+                    <Button onClick={() => handleButtonClick('video')}>
                         Video
                     </Button>
                   </div>
