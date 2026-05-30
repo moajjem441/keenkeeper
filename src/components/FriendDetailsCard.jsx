@@ -11,28 +11,26 @@ import { toast } from '@heroui/react';
 
 const FriendDetailsCard = ({ friend }) => {
 
-    const handleButtonClick = (type) => {
-
-        const buttonClickInfo={
-            friendId:friend?.id,
-            friendName:friend?.name,
+   const handleButtonClick = (type) => {
+    try {
+        const buttonClickInfo = {
+            friendId: friend?.id,
+            friendName: friend?.name,
             timestamp: new Date().toISOString(),
             type,
-        }
+        };
 
-        // console.log("Button Clicked:", buttonClickInfo); 
-
-        const existingData= JSON.parse(localStorage.getItem("ButtonClickData")) || [];
-        // console.log("Existing Data:", existingData);
-
+        const existingData = JSON.parse(localStorage.getItem("ButtonClickData") || "[]");
         existingData.push(buttonClickInfo);
-        // console.log("Updated Data:", existingData);
         localStorage.setItem("ButtonClickData", JSON.stringify(existingData));
 
-         console.log("Saved:", existingData);
-
-         toast.success(`Logged ${type} interaction with ${friend?.name}`);
-    } 
+        // টোস্ট মেসেজ
+        toast.success(`Logged ${type} interaction with ${friend?.name}`);
+    } catch (error) {
+        console.error("Failed to save interaction:", error);
+        toast.error("Failed to log interaction");
+    }
+};
 
     // console.log("friend", friend);
 
