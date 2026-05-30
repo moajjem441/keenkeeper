@@ -1,3 +1,5 @@
+'use client'
+
 import { Button, Card } from '@heroui/react';
 import Image from 'next/image';
 import React from 'react';
@@ -15,6 +17,14 @@ const FriendDetailsCard = ({ friend }) => {
             timestamp: new Date().toISOString(),
             type,
         }
+
+        // console.log("Button Clicked:", buttonClickInfo); 
+
+        const existingData= JSON.parse(localStorage.getItem("ButtonClickData")) || [];
+        // console.log("Existing Data:", existingData);
+
+        existingData.push(buttonClickInfo);
+        // console.log("Updated Data:", existingData);
     } 
 
     console.log("friend", friend);
@@ -162,32 +172,45 @@ const FriendDetailsCard = ({ friend }) => {
 
 
 
-            <div className="col-span-6 row-span-1">
+            <div className="col-span-6 row-span-1 ">
                 <Card className="p-8 shadow-xl">
                   <h1 className="text-xl font-bold mb-4">Quick Check-In</h1>
 
-                <div className="grid grid-cols-3 gap-4 p-4">
-                      <div className="border-1 border-gray-300  p-4  flex flex-col justify-center items-center">
+                <div className="grid grid-cols-3 gap-4 p-4 ">
+
+                      <Button onClick={() => handleButtonClick('call')}>
+                      <div className="border-1 border-gray-300  p-4  flex flex-col justify-center items-center cursor-pointer">
                     <Image src="/assets/call.png" alt="Call" width={20} height={20} />
-                    <Button onClick={() => handleButtonClick('call')}>
+                    
                         Call
-                    </Button>
+                    
                   </div>
 
-                   <div className="border-1 border-gray-300  p-4  flex flex-col justify-center items-center">
+                  </Button>
+
+                  
+
+
+                      <Button onClick={() => handleButtonClick('text')}>
+                   <div className="border-1 border-gray-300  p-4  flex flex-col justify-center items-center cursor-pointer">
                     <Image src="/assets/text.png" alt="Text" width={20} height={20} />
-                    <Button onClick={() => handleButtonClick('text')}>
+                    
                         Text
-                    </Button>
+                    
                   </div>
 
+                  </Button>
 
-                   <div className="border-1 border-gray-300  p-4  flex flex-col justify-center items-center">
+
+
+                     <Button onClick={() => handleButtonClick('video')}>
+                   <div className="border-1 border-gray-300  p-4  flex flex-col justify-center items-center cursor-pointer">
                     <Image src="/assets/video.png" alt="Video" width={20} height={20} />
-                    <Button onClick={() => handleButtonClick('video')}>
+                   
                         Video
-                    </Button>
+                    
                   </div>
+                  </Button>
 
                 </div>
 
