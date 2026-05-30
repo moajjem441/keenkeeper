@@ -1,13 +1,16 @@
+'use client';
 import TImelineCard from '@/components/TImelineCard';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 const TimelinePage = () => {
     const [data,setData]= useState([]);
 
-    useEfffect(()=>{
+    useEffect(()=>{
         const storedData = JSON.parse(localStorage.getItem("ButtonClickData")) || [];
         setData(storedData);
     } ,[]);
+
+    // console.log("Timeline Data:", data);
 
     return (
         <div>
@@ -17,8 +20,8 @@ const TimelinePage = () => {
 
                 <div>
                     {
-                        sotredData.length === 0 ? <p>No interactions yet.</p> :
-                        sotredData.map((data,index)=><TImelineCard key={index} data={data} />)
+                        data.length === 0 ? <p>No interactions yet.</p> :
+                        data.map((data,index)=><TImelineCard key={index} data={data} />)
                     }
                 </div>
             </div>

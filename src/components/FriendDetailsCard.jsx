@@ -25,9 +25,13 @@ const FriendDetailsCard = ({ friend }) => {
 
         existingData.push(buttonClickInfo);
         // console.log("Updated Data:", existingData);
+        localStorage.setItem("ButtonClickData", JSON.stringify(existingData));
+
+         console.log("Saved:", existingData);
     } 
 
-    console.log("friend", friend);
+    // console.log("friend", friend);
+
     return (
         <div className="grid grid-container grid-cols-12 gap-4 my-10 text-[#244d3f]">
             {/* left side  */}

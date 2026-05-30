@@ -28,7 +28,7 @@ export default function RootLayout({ children }) {
       <body className="min-h-full max-w-full  mx-auto flex flex-col ">
         <NavbarPage />
 
-       <main className="text-black">
+       <main className="text-black max-w-10/12 mx-auto  p-4">
          {children}
          {/* <FriendDetailsCard></FriendDetailsCard> */}
          {/* <FriendDetailsPage></FriendDetailsPage> */}
