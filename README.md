@@ -101,10 +101,10 @@ People often lose touch with important friends due to busy schedules.
 ✅ Solution
 
 KeenKeeper helps users:
-
 Track communication history
 Set reminders to reconnect
 Maintain meaningful relationships easily
+
 🔮 Future Improvements
 User authentication system
 Cloud database integration
@@ -114,6 +114,7 @@ Analytics dashboard
 Dark mode support
 Social media integration
 Multi-device sync
+
 🤝 Contributing
 Fork the repository
 Create a new branch
@@ -123,10 +124,10 @@ git commit -m "Add feature"
 Push to GitHub
 git push origin feature-name
 Create a Pull Request
+
+
 👨‍💻 Developer
-
 Moajjem Hossain
-
 GitHub: https://github.com/moajjem441
 
 ⭐ Support
