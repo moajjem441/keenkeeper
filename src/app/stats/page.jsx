@@ -30,7 +30,7 @@ const StatsPage = () => {
         <div className="max-w-8xl mx-auto p-4">
             <p className="text-5xl font-bold">FriendShip Analytics</p>
             {chartData.length === 0 ? (
-                <p>No data available</p>
+              <div>                <p>No data available</p></div>
             ) : (
                 <div>
                    
