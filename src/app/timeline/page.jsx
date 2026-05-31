@@ -9,7 +9,10 @@ const TimelinePage = () => {
 
     useEffect(() => {
         const storedData = JSON.parse(localStorage.getItem("ButtonClickData")) || [];
-        setData(storedData);
+
+        const sortedData = storedData.sort((a,b)=> new Date(b.timestamp) - new Date(a.timestamp));
+        
+        setData(sortedData);
     }, []);
 
     // console.log("Timeline Data:", data);
@@ -19,8 +22,11 @@ const TimelinePage = () => {
         e.preventDefault();
         const searchValue = e.target.value.toLowerCase();
         const storedData = JSON.parse(localStorage.getItem("ButtonClickData")) || [];
-        const filteredData = storedData.filter(item =>item.type.toLowerCase().includes(searchValue));
-        setData(filteredData);
+
+        const filteredData = storedData.filter(item =>item.type.toLowerCase().includes(searchValue) || item.friendName.toLowerCase().includes(searchValue));
+
+        const sortedFilteredData = filteredData.sort((a,b)=> new Date(b.timestamp) - new Date(a.timestamp));
+        setData(sortedFilteredData);
     }
 
 

@@ -7,7 +7,7 @@ import { GoArchive } from 'react-icons/go';
 import { IoMdNotificationsOutline } from 'react-icons/io';
 import { RiDeleteBinLine } from 'react-icons/ri';
 
-import { toast } from '@heroui/react';
+import { toast } from 'react-hot-toast';
 
 const FriendDetailsCard = ({ friend }) => {
 
@@ -25,7 +25,7 @@ const FriendDetailsCard = ({ friend }) => {
         localStorage.setItem("ButtonClickData", JSON.stringify(existingData));
 
         // টোস্ট মেসেজ
-        toast.success(`Logged ${type} interaction with ${friend?.name}`);
+        toast.success(` ${type} interaction with ${friend?.name}`);
     } catch (error) {
         console.error("Failed to save interaction:", error);
         toast.error("Failed to log interaction");
@@ -68,7 +68,7 @@ const FriendDetailsCard = ({ friend }) => {
 
 
                 <div >
-                    <Card className="p-8 shadow-xl">
+                    <Card className="p-8 shadow-lg">
                         <div className="flex items-center gap-2 justify-center">
                             <IoMdNotificationsOutline />
                             <p className="text-gray-600">Snooze 2 Weeks</p>
@@ -78,7 +78,7 @@ const FriendDetailsCard = ({ friend }) => {
 
 
                 <div >
-                    <Card className="p-8 shadow-xl">
+                    <Card className="p-8 shadow-lg">
                         <div className="flex items-center gap-2 justify-center">
                             <GoArchive />
                             <p className="text-gray-600">Archive</p>
@@ -89,7 +89,7 @@ const FriendDetailsCard = ({ friend }) => {
 
 
                 <div >
-                    <Card className="p-8 shadow-xl">
+                    <Card className="p-8 shadow-lg">
                         <div className="flex items-center gap-2 justify-center">
                             <RiDeleteBinLine />
                             <p className="text-red-500">Delete</p>
@@ -113,7 +113,7 @@ const FriendDetailsCard = ({ friend }) => {
              <div className="col-span-4 row-span-1">
                <div className="grid grid-cols-3  gap-4">
             
-                 <Card className="sm:p-4 md:p-8 shadow-xl">
+                 <Card className="sm:p-4 md:p-8 shadow-lg">
                     <p className="sm:text-lg md:text-2xl font-bold">
                         {friend?.days_since_contact
                         }
@@ -122,7 +122,7 @@ const FriendDetailsCard = ({ friend }) => {
                 </Card>
 
 
-                <Card className="sm:p-4 md:p-8 shadow-xl">
+                <Card className="sm:p-4 md:p-8 shadow-lg">
                     <div>
                         <p className="sm:text-lg md:text-2xl font-bold">
                         {friend?.goal
@@ -136,7 +136,7 @@ const FriendDetailsCard = ({ friend }) => {
                 </Card>
 
 
-                <Card className="sm:p-4 md:p-8 shadow-xl">
+                <Card className="sm:p-4 md:p-8 shadow-lg">
                     <p className="sm:text-lg md:text-2xl font-bold">
                         {friend?.next_due_date
                         }
@@ -151,7 +151,7 @@ const FriendDetailsCard = ({ friend }) => {
 
 
             <div className="col-span-5 row-span-1">
-                <Card className="p-8 shadow-xl ">
+                <Card className="p-8 shadow-lg ">
                     <div className="flex items-center justify-between gap-3">
                         <div>
                         <p>Relationship Goal</p>
@@ -179,7 +179,7 @@ const FriendDetailsCard = ({ friend }) => {
 
 
             <div className="col-span-6 row-span-1 ">
-                <Card className="p-8 shadow-xl">
+                <Card className="p-8 shadow-lg">
                   <h1 className="text-xl font-bold mb-4">Quick Check-In</h1>
 
                 <div className="grid sm:grid-cols-2  md:grid-cols-3 gap-4 p-4 ">

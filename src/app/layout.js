@@ -4,7 +4,7 @@ import NavbarPage from "@/components/Navbar";
 import FriendDetailsCard from "@/components/FriendDetailsCard";
 import FooterPage from "@/components/footer";
 
-import toast, { Toaster } from 'react-hot-toast';
+import  { Toaster } from 'react-hot-toast';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

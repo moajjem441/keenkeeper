@@ -12,7 +12,7 @@ const router =useRouter();
 
             
              <Card onClick={() => router.push(`/friend-details/${friend.id}`)}
-              className="w-[259px] cursor-pointer text-center p-8 rounded-2xl  shadow-xl  text-black gap-2">
+              className="w-[259px] cursor-pointer text-center p-8 rounded-2xl  shadow-lg  text-black gap-2">
 
       <img src={friend.picture} alt={friend.name} className="w-26 h-26 rounded-full mx-auto mb-4" />
 
